@@ -25,19 +25,11 @@ describe('Switch', () => {
   test('Case', () => {
     const { container } = render(<Example expression="cat" />);
     const html = container.innerHTML;
-    expect(html).not.eq('pig');
-    expect(html).not.eq('monkey');
     expect(html).eq('cat');
-    expect(html).not.eq('fake cat');
-    expect(html).not.eq('nothing');
   });
   test('Default', () => {
     const { container } = render(<Example expression="dog" />);
     const html = container.innerHTML;
-    expect(html).not.eq('pig');
-    expect(html).not.eq('monkey');
-    expect(html).not.eq('cat');
-    expect(html).not.eq('fake cat');
     expect(html).eq('nothing');
   });
 });
