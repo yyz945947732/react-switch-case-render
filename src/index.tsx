@@ -4,7 +4,7 @@ export interface SwitchProps {
   /**
    * An expression whose result is matched against each Case value.
    */
-  expression?: boolean | number | string | null | undefined;
+  expression?: string | number | boolean | null | undefined;
   /**
    * `<Case />` or `<Default />`
    */
@@ -15,7 +15,7 @@ export interface CaseProps {
   /**
    * used to match against expression. If the expression matches the value, the children will be render.
    */
-  value?: boolean | number | string | null | undefined;
+  value?: string | number | boolean | null | undefined;
   /**
    * If the expression matches the value, the children will be render.
    */
@@ -42,14 +42,15 @@ export function Switch(props: SwitchProps) {
   for (const child of childs) {
     if (isValidElement(child)) {
       const { props, type } = child;
-      if (type === 'Case' && expression === props.value) {
+      const { componentName } = type as any;
+      if (componentName === CaseName && expression === props.value) {
         render = props.children;
         break;
       }
-      if (type === 'Default') {
+      if (componentName === DefaultName) {
         if (defaultCount > 0) {
           throw SyntaxError(
-            `Statement of 'Default' for [Switch] must be a single one at most!`
+            `Statement of '${DefaultName}' for [Switch] must be a single one at most!`
           );
         }
         render = props.children;
