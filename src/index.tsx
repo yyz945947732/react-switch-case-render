@@ -1,4 +1,5 @@
-import { Children, isValidElement } from 'react';
+import React from 'react';
+import { Children, isValidElement, Fragment } from 'react';
 
 export interface SwitchProps {
   /**
@@ -63,12 +64,12 @@ export function Switch(props: SwitchProps) {
 }
 
 export function Case(props: CaseProps) {
-  return props.children;
+  return <Fragment>{props.children}</Fragment>;
 }
 Case.componentName = CaseName;
 
 export function Default(props: DefaultProps) {
-  return props.children;
+  return <Fragment>{props.children}</Fragment>;
 }
 Default.componentName = DefaultName;
 
