@@ -35,27 +35,27 @@ function Example({ expression }) {
 
 The `<Switch />` components provide an expression, matching the expression's value against a series of `<Case />` components, and render `<Case />` children after the first `<Case />` with a matching value.
 
-| Prop       | Type                                 | Default |
-| ---------- | ------------------------------------ | ------- |
-| expression | string/number/boolean/null/undefined | -       |
-| children   | React.ReactNode                      | -       |
+| Prop       | Type                                 |
+| ---------- | ------------------------------------ |
+| expression | string/number/boolean/null/undefined |
+| children   | React.ReactNode                      |
 
 #### \<Case />
 
 provide an value used to match against expression. if the expression matches the value, the `children` will be render.
 
-| Prop     | Type                                 | Default |
-| -------- | ------------------------------------ | ------- |
-| value    | string/number/boolean/null/undefined | -       |
-| children | React.ReactNode                      | -       |
+| Prop     | Type                                 |
+| -------- | ------------------------------------ |
+| value    | string/number/boolean/null/undefined |
+| children | React.ReactNode                      |
 
 #### \<Default />
 
 if the value of expression doesn't match any of the `<Case />` value, the `children` will be render.
 
-| Prop     | Type            | Default |
-| -------- | --------------- | ------- |
-| children | React.ReactNode | -       |
+| Prop     | Type            |
+| -------- | --------------- |
+| children | React.ReactNode |
 
 ## LICENSE
 

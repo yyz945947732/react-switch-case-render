@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": "yyz945947732 <945947732@qq.com>",
+  "homepage": "https://github.com/yyz945947732/react-switch-case-render",
   "main": "dist/index.js",
   "module": "dist/react-switch-case-render.esm.js",
   "typings": "dist/index.d.ts",
@@ -13,6 +14,14 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react-switch",
+    "react-switch-case",
+    "switch-case",
+    "react-condition",
+    "react",
+    "react-components"
+  ],
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
